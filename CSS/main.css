@@ -2,7 +2,7 @@
 :root {
   --Very-Dark-Bluer: hsl(229, 57%, 11%);
   --Pale-Blue: hsl(243, 100%, 93%);
-  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Grayish-Blue: hsl(229deg 8.11% 45%);
   --Dark-Blue: hsl(228, 56%, 26%);
 }
 /* Google Fonts */
@@ -44,7 +44,7 @@ footer {
 main {
   width: 65vw;
   height: 200px;
-  top: 48%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -194,6 +194,9 @@ footer {
 
 /* ---- Media Queries ---- */
 @media (min-width: 1441px) {
+    main{
+        top: 45%;
+    }
   footer > img {
     width: 100vw;
   }
@@ -202,6 +205,9 @@ footer {
   footer > img {
     width: 100vw;
   }
+  main{
+    top: 45%;
+}
 }
 @media (max-width: 1200px) and (min-width: 901px) {
   main {
