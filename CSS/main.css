@@ -188,7 +188,7 @@ main > #right > #storage-left > p {
   padding: 5px 0 0 8px;
   color: var(--Grayish-Blue);
 }
-main > #right > #storage-left > span {
+main > #right > #storage-left > h1 {
   font-size: 2rem;
 }
 /* ---- Footer ---- */
