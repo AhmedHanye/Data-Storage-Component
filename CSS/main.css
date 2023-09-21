@@ -44,7 +44,7 @@ footer {
 main {
   width: 65vw;
   height: 200px;
-  top: 44%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -72,7 +72,7 @@ main > #left > #icons {
   display: flex;
   gap: 20px;
 }
-main > #left > #icons > picture {
+main > #left > #icons > a > picture {
   display: flex;
   height: 45px;
   width: 45px;
@@ -80,6 +80,11 @@ main > #left > #icons > picture {
   background-color: var(--Very-Dark-Bluer);
   justify-content: center;
   align-items: center;
+  transition: 0.2s;
+}
+main > #left > #icons > a:hover > picture {
+  transform: scale(1.05);
+  background-color: var(--Pale-Blue);
 }
 /* -- Right -- */
 main > #right {
@@ -190,25 +195,14 @@ main > #right > #storage-left > span {
 footer {
   bottom: 0;
   z-index: -1;
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100vw;
 }
 
 /* ---- Media Queries ---- */
-@media (min-width: 1441px) {
-    main{
-        top: 45%;
-    }
-  footer > img {
-    width: 100vw;
-  }
-}
-@media (max-width: 1439.9px) {
-  footer > img {
-    width: 100vw;
-  }
-  main{
-    top: 45%;
-}
-}
 @media (max-width: 1200px) and (min-width: 901px) {
   main {
     width: 80vw;
@@ -226,15 +220,15 @@ footer {
   main > #left > #icons {
     gap: 15px;
   }
-  main > #left > #icons > picture {
+  main > #left > #icons > a > picture {
     height: 35px;
     width: 35px;
   }
-  main > #left > #icons > picture > img {
+  main > #left > #icons > a > picture > img {
     height: 15px;
     width: auto;
   }
-  footer > img {
+  footer {
     height: 48vh;
   }
 }
@@ -255,11 +249,11 @@ footer {
   main > #left > #icons {
     gap: 10px;
   }
-  main > #left > #icons > picture {
+  main > #left > #icons > a > picture {
     height: 30px;
     width: 30px;
   }
-  main > #left > #icons > picture > img {
+  main > #left > #icons > a > picture > img {
     height: 13px;
     width: auto;
   }
@@ -285,7 +279,7 @@ footer {
     top: -50px;
     right: 40px;
   }
-  footer > img {
+  footer {
     height: 45vh;
   }
 }
