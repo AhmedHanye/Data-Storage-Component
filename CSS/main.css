@@ -1,0 +1,337 @@
+/* Variables */
+:root {
+  --Very-Dark-Bluer: hsl(229, 57%, 11%);
+  --Pale-Blue: hsl(243, 100%, 93%);
+  --Grayish-Blue: hsl(229, 7%, 55%);
+  --Dark-Blue: hsl(228, 56%, 26%);
+}
+/* Google Fonts */
+@font-face {
+  font-family: "Raleway";
+  src: url(../Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(../Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: var(--Very-Dark-Bluer);
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+main,
+footer {
+  position: absolute;
+}
+
+/* ---- Main ---- */
+main {
+  width: 65vw;
+  height: 200px;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+}
+main > #left,
+main > #right {
+  background-color: var(--Dark-Blue);
+  display: flex;
+}
+/* -- Left -- */
+main > #left {
+  width: 40%;
+  height: 100%;
+  padding: 5vh 4vw;
+  border-radius: 10px 100px 10px 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+main > #left > #icons {
+  display: flex;
+  gap: 20px;
+}
+main > #left > #icons > picture {
+  display: flex;
+  height: 45px;
+  width: 45px;
+  border-radius: 8px;
+  background-color: var(--Very-Dark-Bluer);
+  justify-content: center;
+  align-items: center;
+}
+/* -- Right -- */
+main > #right {
+  width: 60%;
+  height: 75%;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 4vw;
+  position: relative;
+}
+main > #right > p {
+  color: var(--Pale-Blue);
+  font-size: small;
+}
+main > #right > p > #storage {
+  color: white;
+  font-weight: 700;
+}
+main > #right > #container {
+  width: 100%;
+  padding: 20px 0;
+}
+main > #right > #container > #progress {
+  height: 18px;
+  background-color: var(--Very-Dark-Bluer);
+  border-radius: 10px;
+  padding: 2px;
+  position: relative;
+}
+main > #right > #container > #progress::before {
+  content: "0 GB";
+  color: var(--Pale-Blue);
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px;
+}
+main > #right > #container > #progress::after {
+  content: "1000 GB";
+  color: var(--Pale-Blue);
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px;
+}
+main > #right > #container > #progress > #bar {
+  border-radius: inherit;
+  display: flex;
+  width: 80%;
+  min-width: 3%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%) 0%,
+    hsl(335, 100%, 65%) 100%
+  );
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2px;
+}
+main > #right > #container > #progress > #bar > #circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--Pale-Blue);
+}
+/* -- Storage Left -- */
+main > #right > #storage-left {
+  position: absolute;
+  height: 80px;
+  width: 180px;
+  background-color: white;
+  border-radius: 10px;
+  top: -60px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+main > #right > #storage-left::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid white;
+  bottom: -10px;
+  right: -20px;
+  transform: rotate(90deg);
+}
+main > #right > #storage-left > p {
+  font-size: 13px;
+  padding: 5px 0 0 8px;
+  color: var(--Grayish-Blue);
+}
+main > #right > #storage-left > span {
+  font-size: 2rem;
+}
+/* ---- Footer ---- */
+footer {
+  bottom: 0;
+  z-index: -1;
+}
+
+/* ---- Media Queries ---- */
+@media (min-width: 1441px) {
+  footer > img {
+    width: 100vw;
+  }
+}
+@media (max-width: 1439.9px) {
+  footer > img {
+    width: 100vw;
+  }
+}
+@media (max-width: 1200px) and (min-width: 901px) {
+  main {
+    width: 80vw;
+    height: 180px;
+    top: 52%;
+  }
+  main > #left {
+    padding: 3vh 4vw;
+    border-radius: 10px 80px 10px 10px;
+  }
+  main > #left > #logo {
+    height: 35px;
+    width: auto;
+  }
+  main > #left > #icons {
+    gap: 15px;
+  }
+  main > #left > #icons > picture {
+    height: 35px;
+    width: 35px;
+  }
+  main > #left > #icons > picture > img {
+    height: 15px;
+    width: auto;
+  }
+  footer > img {
+    height: 48vh;
+  }
+}
+@media (max-width: 900px) and (min-width: 769px) {
+  main {
+    width: 85vw;
+    height: 150px;
+    top: 55%;
+  }
+  main > #left {
+    padding: 2vh 4vw;
+    border-radius: 10px 60px 10px 10px;
+  }
+  main > #left > #logo {
+    height: 30px;
+    width: auto;
+  }
+  main > #left > #icons {
+    gap: 10px;
+  }
+  main > #left > #icons > picture {
+    height: 30px;
+    width: 30px;
+  }
+  main > #left > #icons > picture > img {
+    height: 13px;
+    width: auto;
+  }
+  main > #right {
+    padding: 0 4vw;
+  }
+  main > #right > p {
+    font-size: 12px;
+  }
+  main > #right > #container > #progress::before {
+    font-size: 10px;
+  }
+  main > #right > #container > #progress::after {
+    font-size: 10px;
+  }
+  main > #right > #container > #progress > #bar > #circle {
+    width: 8px;
+    height: 8px;
+  }
+  main > #right > #storage-left {
+    height: 60px;
+    width: 150px;
+    top: -50px;
+    right: 40px;
+  }
+  footer > img {
+    height: 45vh;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main {
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8vh;
+  }
+  main > #left,
+  main > #right {
+    width: 85%;
+  }
+  main > #left {
+    height: 50%;
+    padding: 5vh 10vw;
+  }
+  main > #right {
+    height: 40%;
+    padding-top: 5vh;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main > #right > #storage-left {
+    position: absolute;
+    top: initial;
+    height: 70px;
+    width: 190px;
+    bottom: -30px;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 20px;
+  }
+  main > #right > #storage-left::after {
+    content: none;
+  }
+  footer {
+    display: none;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Fylo data storage component with two column layout, features section and footer."
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="./CSS/normalize.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main>
+      <div id="left">
+        <img
+          src="./images/logo.svg"
+          height="40"
+          width="135"
+          id="logo"
+          alt="Logo"
+        />
+        <div id="icons">
+          <picture>
+            <img
+              src="./images/icon-document.svg"
+              width="20"
+              height="25"
+              alt="icon document"
+            />
+          </picture>
+          <picture>
+            <img
+              src="./images/icon-folder.svg"
+              width="24"
+              height="20"
+              alt="icon folder"
+            />
+          </picture>
+          <picture>
+            <img
+              src="./images/icon-upload.svg"
+              width="27"
+              height="18"
+              alt="icon upload"
+            />
+          </picture>
+        </div>
+      </div>
+      <div id="right">
+        <div id="storage-left">
+          <span>185</span>
+          <p>GB LEFT</p>
+        </div>
+        <p>You've used <span id="storage">815 GB</span> of your storage</p>
+        <div id="container">
+          <div id="progress">
+            <span id="bar">
+              <span id="circle"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img
+        src="./images/bg-desktop.png"
+        width="1440"
+        height="420"
+        alt="background"
+      />
+    </footer>
+  </body>
+</html>
