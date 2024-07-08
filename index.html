@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Data Storage Component Front End Mentor"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, Front End Mentor, Data Storage Component"
+    />
+    <meta name="author" content="Ahmed Hanye" />
+    <link rel="stylesheet" href="./styles/reset.min.css" />
+    <link rel="stylesheet" href="./styles/main.min.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.webp"
+      type="image/webp"
+    />
+    <title>Data Storage Component</title>
+  </head>
+  <body>
+    <main class="flex justify-center items-center" id="main-component">
+      <div id="container" class="flex">
+        <div id="left" class="flex justify-center flex-column">
+          <img src="./images/logo.svg" width="135" height="40" alt="Logo" />
+          <div class="flex" id="icons">
+            <div class="flex justify-center items-center">
+              <img
+                src="./images/icon-document.svg"
+                width="20"
+                height="24"
+                alt="document image"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="./images//icon-folder.svg"
+                width="24"
+                height="20"
+                alt="folder image"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="./images/icon-upload.svg"
+                width="24"
+                height="16"
+                alt="upload image"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="right" class="flex justify-center flex-column">
+          <p>You've used <span>815 GB</span> of your storage</p>
+          <div id="progress-bar">
+            <div id="progress" class="flex items-center">
+              <div id="ball"></div>
+            </div>
+          </div>
+          <p class="flex items-center" id="details">
+            <span>0 GB</span><span>1000 GB</span>
+          </p>
+          <div id="message" class="flex items-center justify-center">
+            <p class="flex items-center">185<span>GB LEFT</span></p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
