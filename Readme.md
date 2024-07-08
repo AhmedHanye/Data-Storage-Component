@@ -17,7 +17,7 @@ this component is used to display Data Storage Component
 - Clone the repository
 
 ```bash
-git clone
+git clone https://ahmedhanye.github.io/Data-Storage-Component/
 ```
 
 - Open the `index.html` file in your browser

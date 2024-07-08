@@ -170,3 +170,9 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 500px){
+  #message{
+    bottom: -4rem;
+  }
+}
